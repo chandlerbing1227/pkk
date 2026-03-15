@@ -1,61 +1,5 @@
-@font-face {
-  font-family: "Inter-SemiBold";
-  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-ThinItalic";
-  src: url("../fonts/Inter-ThinItalic.woff2") format("woff2");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Bold";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Light";
-  src: url("../fonts/Inter-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Regular";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Thin";
-  src: url("../fonts/Inter-Thin.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Medium";
-  src: url("../fonts/Inter-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Anton";
-  src: url("../fonts/Anton-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 .lp-hero {
-  background-color: #121212;
+  background-color: #FFFFFF;
 }
 .lp-hero .hero-box {
   gap: 25px;
@@ -114,7 +58,8 @@
   }
 }
 .lp-grid .grid .card {
-  background-color: #1a1a1a;
+  background-color: #F3F6FA;
+  border: 1px solid #D7E0EA;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -139,7 +84,7 @@
 }
 .lp-grid .grid .card .meta {
   padding: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #D7E0EA;
 }
 .lp-grid .grid .card .meta p {
   text-align: center;
@@ -148,7 +93,7 @@
 }
 
 .lp-collection {
-  background-color: #1a1a1a;
+  background-color: #F3F6FA;
 }
 .lp-collection .title {
   margin-bottom: 20px;
@@ -195,7 +140,8 @@
   }
 }
 .lp-why .why-grid .item {
-  background-color: #121212;
+  background-color: #FFFFFF;
+  border: 1px solid #D7E0EA;
   border-radius: 10px;
   padding: 22px;
   height: 100%;
@@ -208,7 +154,7 @@
   }
 }
 .lp-why .why-grid .item:hover {
-  filter: drop-shadow(3px 3px 2px #909090);
+  filter: drop-shadow(3px 3px 2px #D7E0EA);
 }
 .lp-why .why-grid .item .icon {
   margin-bottom: 10px;
@@ -226,7 +172,7 @@
 }
 
 .lp-logos {
-  background-color: #121212;
+  background-color: #FFFFFF;
 }
 .lp-logos .logo-grid {
   display: grid;
@@ -258,7 +204,7 @@
 }
 
 .lp-cta {
-  background-color: #1a1a1a;
+  background-color: #F3F6FA;
 }
 .lp-cta .cta-box {
   gap: 20px;
@@ -292,13 +238,14 @@
   }
 }
 .lp-cta .cta-box .stats .stat {
-  background-color: #121212;
+  background-color: #FFFFFF;
+  border: 1px solid #D7E0EA;
   border-radius: 8px;
   padding: 14px 16px;
   text-align: center;
 }
 .lp-cta .cta-box .stats .stat .h4 {
-  color: #e50914;
+  color: #7F00FF;
 }
 .lp-cta .cta-box .stats .stat p {
   font-family: "Inter-SemiBold", sans-serif;
@@ -362,7 +309,7 @@
 }
 
 .lp-blog {
-  background-color: #121212;
+  background-color: #FFFFFF;
 }
 .lp-blog .blog-grid {
   display: grid;
@@ -375,7 +322,8 @@
   }
 }
 .lp-blog .blog-grid .post {
-  background-color: #1a1a1a;
+  background-color: #F3F6FA;
+  border: 1px solid #D7E0EA;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

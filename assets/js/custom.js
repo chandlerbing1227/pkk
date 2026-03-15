@@ -20,15 +20,15 @@ function setActiveMenu(menuSelector) {
   // Get current page (last part of URL)
   let current =
     window.location.pathname.split("/").filter(Boolean).pop() || "home";
+  const siteLogo = document.querySelector("#site-logo");
 
   // Convert home path
-  if (current === "pkk") current = "home"; // localhost/pkk/
+  if (current === "pkk" || current === "index.php") current = "home"; // localhost/pkk/ or /index.php
   if (current === "") current = "home";
 
-  if (current === "home") {
+  if (current === "home" && siteLogo) {
     window.scrollTo(0, 0);
-    document.querySelector("#site-logo").classList.add("homepage-logo");
-    logoAnimation();
+    siteLogo.classList.add("homepage-logo");
   }
 
   $(menuSelector).each(function () {
@@ -36,7 +36,7 @@ function setActiveMenu(menuSelector) {
     let link = $(this).attr("href").split("/").filter(Boolean).pop();
 
     // Convert link home
-    if (!link || link === "pkk") link = "home";
+    if (!link || link === "pkk" || link === "index.php") link = "home";
 
     // Compare
     if (link === current) {
@@ -271,7 +271,7 @@ function tabcontent() {
 
     // LAZY LOAD AI CONTENT ON FIRST OPEN
     if ($target.data("loaded") === false) {
-      $target.load("/includes/portfolio-ai.php", function () {
+      $target.load("includes/portfolio-ai.php", function () {
         $target.data("loaded", true);
         initSliders($target);
       });
@@ -488,10 +488,7 @@ function tabcontent() {
 // let lastWidth = window.innerWidth;
 
 // function isHomePage() {
-//   return (
-//     window.location.origin === "https://pkkproductions.com" &&
-//     (window.location.pathname === "/" || window.location.pathname === "")
-//   );
+//   return window.location.pathname === "/" || window.location.pathname === "";
 // }
 
 // function logoAnimation() {
@@ -626,8 +623,7 @@ let logoScrollTrigger = null;
 let lastWidth = window.innerWidth;
 
 function isHomePage() {
-  return window.location.origin === "https://pkkproductions.com" &&
-    (window.location.pathname === "/" || window.location.pathname === "");
+  return !!document.querySelector("#site-logo.homepage-logo");
 }
 
 function logoAnimation() {
@@ -735,8 +731,6 @@ function logoAnimation() {
     }
   });
 }
-
-$(document).ready(logoAnimation);
 
 function applySimplePhoneMask() {
   $('input[name="phone"]').on('input', function () {

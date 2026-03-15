@@ -10,7 +10,7 @@ include 'includes/header.php';
         <h1 class="h1">Your New‑age Tech Partner<br><span>PKK Productions</span></h1>
         <p>Create professional, studio‑quality visuals quickly with an AI‑powered workflow.</p>
         <div class="button-box">
-          <a href="https://pkkproductions.com/contact-us.php" class="btn-default"><span>Get Started</span><span
+          <a href="<?php echo $base_url; ?>contact-us.php" class="btn-default"><span>Get Started</span><span
               class="hover-bg"></span></a>
           <!-- <a href="#" class="btn-default white"><span>See Pricing</span><span class="hover-bg"></span></a> -->
         </div>
@@ -160,19 +160,19 @@ include 'includes/header.php';
 
         <div class="creative-slider owl-carousel owl-theme">
           <div class="item">
-            <img src="https://pkkproductions.com/assets/images/pkk-logo-white.svg" alt="brand logo">
+            <img src="<?php echo $base_url; ?>assets/images/pkk-logo-white.svg" alt="brand logo">
           </div>
           <div class="item">
-            <img src="https://pkkproductions.com/assets/images/pkk-logo-white.svg" alt="brand logo">
+            <img src="<?php echo $base_url; ?>assets/images/pkk-logo-white.svg" alt="brand logo">
           </div>
           <div class="item">
-            <img src="https://pkkproductions.com/assets/images/pkk-logo-white.svg" alt="brand logo">
+            <img src="<?php echo $base_url; ?>assets/images/pkk-logo-white.svg" alt="brand logo">
           </div>
           <div class="item">
-            <img src="https://pkkproductions.com/assets/images/pkk-logo-white.svg" alt="brand logo">
+            <img src="<?php echo $base_url; ?>assets/images/pkk-logo-white.svg" alt="brand logo">
           </div>
           <div class="item">
-            <img src="https://pkkproductions.com/assets/images/pkk-logo-white.svg" alt="brand logo">
+            <img src="<?php echo $base_url; ?>assets/images/pkk-logo-white.svg" alt="brand logo">
           </div>
         </div>
       </div>
@@ -219,7 +219,7 @@ include 'includes/header.php';
           <p>Log in to your dashboard to view assets and request new shoots.</p> -->
           <div class="button-box">
             <!-- <a href="#" class="btn-default"><span>Log In</span><span class="hover-bg"></span></a> -->
-            <a href="https://pkkproductions.com/contact-us.php" class="btn-default white"><span>AI Starts
+            <a href="<?php echo $base_url; ?>contact-us.php" class="btn-default white"><span>AI Starts
                 Here</span><span class="hover-bg"></span></a>
           </div>
         </div>

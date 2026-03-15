@@ -8,11 +8,35 @@
   z-index: 999;
   padding: 15px 0;
   border-bottom: 1px solid transparent;
+  box-shadow: 0 14px 35px rgba(30, 36, 48, 0.08);
   @include transition;
 
   &.scrolled {
-    background-color: $light_black;
+    background-color: rgba(255, 255, 255, 0.94);
     border-bottom: 1px solid $theme_color;
+
+    .main-nav {
+      .nav-wrap {
+        nav {
+          ul {
+            li {
+              a {
+                @include min_992 {
+                  color: $black;
+                }
+
+                &.active,
+                &:hover {
+                  @include min_992 {
+                    color: $theme_color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .header-box {
@@ -197,7 +221,7 @@
                 @include transition;
 
                 @include min_992 {
-                  color: $white;
+                  color: $black;
                 }
 
                 &::after {
@@ -235,7 +259,7 @@
                   color: $white;
 
                   @include min_992 {
-                    color: $white;
+                    color: $theme_color;
                   }
                 }
               }

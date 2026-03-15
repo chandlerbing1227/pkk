@@ -90,7 +90,7 @@ include 'includes/header.php';
                     <h2 class="h3">Our Services</h2>
                 </div>
                 <div class="button-box">
-                    <a href="https://pkkproductions.com/portfolio.php" class="btn-default">
+                    <a href="<?php echo $base_url; ?>portfolio.php" class="btn-default">
                         <span>view portfolio</span>
                         <span class="hover-bg"></span>
                     </a>
@@ -109,7 +109,7 @@ include 'includes/header.php';
                         </div>
                         <div class="content-box">
                             <div class="text-box">
-                                <p>From Concept to Execution, All In-House.</p>
+                                <h5 class="h5">From Concept to Execution, All In-House.</h5>
                                 <!-- <ul>
                                     <li>Celebrity Shoots – Editorial-style portraits with strong visual storytelling
                                     </li>
@@ -120,7 +120,7 @@ include 'includes/header.php';
                                 </ul> -->
                             </div>
                             <div class="button-box">
-                                <a href="https://pkkproductions.com/portfolio.php?tab=photoshoot" class="btn-default">
+                                <a href="<?php echo $base_url; ?>portfolio.php?tab=photoshoot" class="btn-default">
                                     <span>view Work</span>
                                     <span class="hover-bg"></span>
                                 </a>
@@ -140,7 +140,7 @@ include 'includes/header.php';
                         </div>
                         <div class="content-box">
                             <div class="text-box">
-                                <p>Content super charged by AI for faster results.</p>
+                                <h5 class="h5">Content super charged by AI for faster results.</h5>
                                 <!-- <ul>
                                     <li>Fashion – AI models, outfits, and concept visuals</li>
                                     <li>Lifestyle – Realistic environments and mood-based storytelling</li>
@@ -148,11 +148,11 @@ include 'includes/header.php';
                                 </ul> -->
                             </div>
                             <div class="button-box">
-                                <!-- <a href="https://pkkproductions.com/portfolio.php?tab=ai" class="btn-default">
+                                <!-- <a href="<?php echo $base_url; ?>portfolio.php?tab=ai" class="btn-default">
                                     <span>view Work</span>
                                     <span class="hover-bg"></span>
                                 </a> -->
-                                <a href="https://pkkproductions.com/pkk-ai.php" class="btn-default">
+                                <a href="<?php echo $base_url; ?>pkk-ai.php" class="btn-default">
                                     <span>view Work</span>
                                     <span class="hover-bg"></span>
                                 </a>
@@ -172,7 +172,7 @@ include 'includes/header.php';
                         </div>
                         <div class="content-box">
                             <div class="text-box">
-                                <p>Scroll-Stopping Social Media Management.</p>
+                                <h5 class="h5">Scroll-Stopping Social Media Management.</h5>
                                 <!-- <ul>
                                     <li>Social media photos & reels</li>
                                     <li>Content planning & creative direction</li>
@@ -180,7 +180,7 @@ include 'includes/header.php';
                                 </ul> -->
                             </div>
                             <div class="button-box">
-                                <a href="https://pkkproductions.com/portfolio.php" class="btn-default">
+                                <a href="<?php echo $base_url; ?>portfolio.php" class="btn-default">
                                     <span>view Work</span>
                                     <span class="hover-bg"></span>
                                 </a>

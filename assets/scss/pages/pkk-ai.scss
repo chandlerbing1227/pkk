@@ -59,6 +59,7 @@
 
     .card {
       background-color: $light_black;
+      border: 1px solid $border_gray;
       border-radius: 10px;
       overflow: hidden;
       @include transition;
@@ -82,7 +83,7 @@
 
       .meta {
         padding: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 1px solid $border_gray;
 
         p {
           text-align: center;
@@ -143,6 +144,7 @@
 
     .item {
       background-color: $black_second;
+      border: 1px solid $border_gray;
       border-radius: 10px;
       padding: 22px;
       height: 100%;
@@ -244,6 +246,7 @@
 
       .stat {
         background-color: $black_second;
+        border: 1px solid $border_gray;
         border-radius: 8px;
         padding: 14px 16px;
         text-align: center;
@@ -336,6 +339,7 @@
 
     .post {
       background-color: $light_black;
+      border: 1px solid $border_gray;
       border-radius: 10px;
       overflow: hidden;
       @include transition;

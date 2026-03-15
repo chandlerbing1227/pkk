@@ -10,11 +10,18 @@ if ($host === 'localhost' || $host === '127.0.0.1' || $host === '192.168.1.83') 
     $base_url = 'https://pkkproductions.com/';
 }
 
-// Homepage detection (root URL)
-$is_home = (
-    $_SERVER['REQUEST_URI'] === '/' ||
-    $_SERVER['REQUEST_URI'] === '/pkk/'
-);
+$request_path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$request_path = rtrim($request_path, '/');
+$request_path = $request_path === '' ? '/' : $request_path;
+
+$base_path = parse_url($base_url, PHP_URL_PATH) ?: '/';
+$base_path = rtrim($base_path, '/');
+
+$home_paths = ($base_path === '')
+    ? ['/', '/index.php']
+    : [$base_path, "$base_path/index.php"];
+
+$is_home = in_array($request_path, $home_paths, true);
 ?>
 
 
@@ -68,10 +75,10 @@ $is_home = (
                     <div class="nav-wrap">
                         <nav>
                             <ul>
-                                <li><a href="https://pkkproductions.com/">Home</a></li>
-                                <li><a href="https://pkkproductions.com/about.php">About Us</a></li>
-                                <li><a href="https://pkkproductions.com/portfolio.php">Portfolio</a></li>
-                                <li><a href="https://pkkproductions.com/contact-us.php">Contact Us</a></li>
+                                <li><a href="<?php echo $base_url; ?>">Home</a></li>
+                                <li><a href="<?php echo $base_url; ?>about.php">About Us</a></li>
+                                <li><a href="<?php echo $base_url; ?>portfolio.php">Portfolio</a></li>
+                                <li><a href="<?php echo $base_url; ?>contact-us.php">Contact Us</a></li>
                             </ul>
                         </nav>
                         <!-- <div class="button-box mobile">

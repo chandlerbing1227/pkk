@@ -151,6 +151,7 @@ main {
         }
 
         .h5 {
+          color: $gray;
           text-align: center;
 
           @include min_768 {
@@ -389,7 +390,7 @@ main {
         }
 
         .btn-default {
-          background-color: #424242;
+          background-color: $theme_color;
         }
       }
     }
@@ -399,21 +400,21 @@ main {
         cursor: pointer;
 
         .service-title {
-          border-bottom: 1px solid $white;
+          border-bottom: 1px solid $border_gray;
           overflow: hidden;
 
           &.active {
             h3 {
               -webkit-text-stroke: unset !important;
-              color: $theme_color;
+              color: $heading_color;
             }
           }
 
           h3 {
             text-transform: uppercase;
-            color: $black;
-            -webkit-text-stroke: 2px $white;
-            text-stroke: 2px $white;
+            color: transparent;
+            -webkit-text-stroke: 2px $gray;
+            text-stroke: 2px $gray;
             padding-bottom: 10px;
             text-align: left;
             transition: all 0.5 ease-in-out;
@@ -463,8 +464,7 @@ main {
 
           .content-box {
             width: 100%;
-            background-color: #515151b3;
-            // position: absolute;
+            background-color: $light_black;
             bottom: 0;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
@@ -477,11 +477,12 @@ main {
 
             @include min_768 {
               position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
             }
 
             @include min_992 {
               padding: 60px 55px;
-              align-items: flex-end;
+              align-items: center;
               flex-direction: row;
             }
 
@@ -490,17 +491,9 @@ main {
                 width: 60%;
               }
 
-              p {
+              .h5 {
                 text-align: left;
-                font-size: 14px;
-
-                @include min_768 {
-                  font-size: 16px;
-                }
-
-                @include min_992 {
-                  font-size: 18px;
-                }
+                color: $theme_color;
               }
 
               ul {
@@ -590,10 +583,9 @@ main {
     &::after {
       height: 400px;
       width: 100%;
-      background: #000000;
       background: linear-gradient(180deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 1) 100%);
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%);
       left: 0;
       bottom: 0;
       @include before_after;
@@ -615,6 +607,7 @@ main {
       .box {
         padding: 40px 30px 40px 20px;
         background-color: $dark_gray;
+        border: 1px solid $border_gray;
 
         .top-part {
           margin-bottom: 20px;

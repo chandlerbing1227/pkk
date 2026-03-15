@@ -1,59 +1,3 @@
-@font-face {
-  font-family: "Inter-SemiBold";
-  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-ThinItalic";
-  src: url("../fonts/Inter-ThinItalic.woff2") format("woff2");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Bold";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Light";
-  src: url("../fonts/Inter-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Regular";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Thin";
-  src: url("../fonts/Inter-Thin.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter-Medium";
-  src: url("../fonts/Inter-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Anton";
-  src: url("../fonts/Anton-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 main {
   margin-top: 100vh;
 }
@@ -80,8 +24,8 @@ main .banner .banner-box {
   z-index: 1;
 }
 main .banner .banner-box .client-wrap {
-  background-color: #e50914;
-  border: 2px solid #f28489;
+  background-color: #7F00FF;
+  border: 2px solid #02D8E9;
   border-radius: 50px;
   padding: 12px;
   gap: 15px;
@@ -135,7 +79,7 @@ main .banner .banner-box h1 {
   }
 }
 main .home-about {
-  background-color: #1a1a1a;
+  background-color: #F3F6FA;
 }
 main .home-about .about-box {
   gap: 50px;
@@ -193,6 +137,7 @@ main .home-about .about-box .text-box .h3 {
   }
 }
 main .home-about .about-box .text-box .h5 {
+  color: #667085;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -314,7 +259,7 @@ main .service .service-box .content-box .service-list {
 }
 main .service .service-box .content-box .service-list .service-list-item {
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: #F3F6FA;
   border-radius: 15px;
   padding: 30px 20px;
   cursor: default;
@@ -328,7 +273,7 @@ main .service .service-box .content-box .service-list .service-list-item {
   }
 }
 main .service .service-box .content-box .service-list .service-list-item:hover {
-  background-color: #e50914;
+  background-color: #7F00FF;
 }
 main .service .service-box .content-box .service-list .service-list-item img {
   margin-bottom: 15px;
@@ -407,24 +352,24 @@ main .we-do .section-heading .button-box {
   }
 }
 main .we-do .section-heading .button-box .btn-default {
-  background-color: #424242;
+  background-color: #7F00FF;
 }
 main .we-do .our-service .service-item {
   cursor: pointer;
 }
 main .we-do .our-service .service-item .service-title {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #D7E0EA;
   overflow: hidden;
 }
 main .we-do .our-service .service-item .service-title.active h3 {
   -webkit-text-stroke: unset !important;
-  color: #e50914;
+  color: #02D8E9;
 }
 main .we-do .our-service .service-item .service-title h3 {
   text-transform: uppercase;
-  color: #000000;
-  -webkit-text-stroke: 2px #ffffff;
-  text-stroke: 2px #ffffff;
+  color: transparent;
+  -webkit-text-stroke: 2px #667085;
+  text-stroke: 2px #667085;
   padding-bottom: 10px;
   text-align: left;
   transition: all 0.5 ease-in-out;
@@ -456,7 +401,7 @@ main .we-do .our-service .service-item .service-content .image-box img {
 }
 main .we-do .our-service .service-item .service-content .content-box {
   width: 100%;
-  background-color: rgba(81, 81, 81, 0.7019607843);
+  background-color: #F3F6FA;
   bottom: 0;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -470,12 +415,13 @@ main .we-do .our-service .service-item .service-content .content-box {
 @media screen and (min-width: 768px) {
   main .we-do .our-service .service-item .service-content .content-box {
     position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 @media screen and (min-width: 992px) {
   main .we-do .our-service .service-item .service-content .content-box {
     padding: 60px 55px;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: row;
   }
 }
@@ -484,19 +430,9 @@ main .we-do .our-service .service-item .service-content .content-box {
     width: 60%;
   }
 }
-main .we-do .our-service .service-item .service-content .content-box .text-box p {
+main .we-do .our-service .service-item .service-content .content-box .text-box .h5 {
   text-align: left;
-  font-size: 14px;
-}
-@media screen and (min-width: 768px) {
-  main .we-do .our-service .service-item .service-content .content-box .text-box p {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 992px) {
-  main .we-do .our-service .service-item .service-content .content-box .text-box p {
-    font-size: 18px;
-  }
+  color: #7F00FF;
 }
 main .we-do .our-service .service-item .service-content .content-box .text-box ul {
   margin-top: 1rem;
@@ -543,7 +479,7 @@ main .we-do .our-service .service-item .service-content .content-box .button-box
 }
 
 .trust {
-  background-color: #121212;
+  background-color: #FFFFFF;
 }
 .trust .section-heading {
   background-image: url("../../images/trust-bg.png");
@@ -576,8 +512,7 @@ main .we-do .our-service .service-item .service-content .content-box .button-box
 .trust .trust-box::after {
   height: 400px;
   width: 100%;
-  background: #000000;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
   left: 0;
   bottom: 0;
   content: "";
@@ -600,7 +535,8 @@ main .we-do .our-service .service-item .service-content .content-box .button-box
 }
 .trust .trust-box .trust-inner .box {
   padding: 40px 30px 40px 20px;
-  background-color: #292929;
+  background-color: #E9EFF5;
+  border: 1px solid #D7E0EA;
 }
 .trust .trust-box .trust-inner .box .top-part {
   margin-bottom: 20px;
@@ -621,7 +557,7 @@ main .we-do .our-service .service-item .service-content .content-box .button-box
   height: 50px;
   overflow: hidden;
   border-radius: 50%;
-  border: 2px solid #e50914;
+  border: 2px solid #7F00FF;
 }
 @media screen and (min-width: 768px) {
   .trust .trust-box .trust-inner .box .end-part .wallpaper {
@@ -649,7 +585,7 @@ main .we-do .our-service .service-item .service-content .content-box .button-box
 
 .turn .turn-box {
   padding: 40px 20px;
-  background-color: #e50914;
+  background-color: #7F00FF;
   position: relative;
   border-radius: 100px 0 100px 0;
 }

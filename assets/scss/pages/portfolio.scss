@@ -213,6 +213,7 @@
         &.active {
           background: $theme_color;
           border-color: $theme_color;
+          color: $white;
         }
       }
     }
@@ -259,7 +260,8 @@
 .portfolio-lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,6 +280,7 @@
     max-height: 95vh;
     object-fit: contain;
     border-radius: 15px;
+    border: 1px solid $border_gray;
   }
 
   .lightbox-close {
@@ -285,7 +288,7 @@
     top: 20px;
     right: 30px;
     font-size: 40px;
-    color: #fff;
+    color: $theme_color;
     cursor: pointer;
     line-height: 1;
   }
