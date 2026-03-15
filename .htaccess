@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+RewriteEngine On
+# RewriteBase /pkk/
+RewriteBase /
+
+# Redirect clean URLs to PHP files
+RewriteRule ^about/?$ about.php [L]
+RewriteRule ^portfolio/?$ portfolio.php [L]
+RewriteRule ^contact-us/?$ contact-us.php [L]
+
+# Allow direct access for real files/folders
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d

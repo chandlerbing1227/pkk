@@ -1,0 +1,236 @@
+@use "../index.scss" as *;
+
+.contact-us {
+  height: 80vh;
+  @include flex-center;
+}
+
+.contact-form {
+  .col-6 {
+    width: 100%;
+
+    @include min_992 {
+      width: 48%;
+    }
+  }
+
+  .col-12 {
+    width: 100%;
+
+    @include min_992 {
+      width: 100%;
+    }
+  }
+
+  .contact-form-box {
+    // gap: 30px;
+    // flex-direction: column;
+    // @include flex-center;
+
+    @include min_992 {
+      flex-direction: row;
+    }
+
+    .info-box {
+      flex-direction: column;
+      gap: 10px;
+      @include flexbox;
+
+      @include min_992 {
+        flex-direction: row;
+        gap: 100px
+      }
+
+      @include min_1200 {
+        gap: 150px
+      }
+
+      .box {
+
+        p {
+          text-align: left;
+          margin-bottom: 10px;
+          @include Font_Inter_SemiBold;
+
+          @include min_992 {
+            margin-bottom: 15px;
+          }
+        }
+
+        h3 {
+          margin-bottom: 20px;
+          font-size: 16px;
+          @include Font_Inter_Regular;
+
+          @include min_768 {
+            font-size: 18px;
+          }
+
+          @include min_768 {
+            font-size: 22px;
+          }
+
+          &.h3 {
+            @include min_992 {
+              font-size: 36px;
+            }
+
+            a {
+              font-size: unset;
+              display: inline-flex;
+              align-self: center;
+              gap: 5px;
+              @include transition;
+
+              i {
+                color: $theme_color;
+                font-size: 30px;
+                display: flex;
+                align-items: center;
+              }
+
+              &:hover {
+                color: $theme_color;
+              }
+            }
+          }
+
+          span {
+            color: $theme_color;
+            @include Font_Anton;
+            font-size: 26px;
+
+            @include min_768 {
+              font-size: 28px;
+            }
+
+            @include min_768 {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    .form-box {
+      border-radius: 20px;
+      margin: 30px auto 0;
+
+      @include min_992 {
+        background-color: $light_black;
+        padding: 50px 50px;
+        width: 70%;
+        margin: 50px auto 0;
+      }
+
+      .h3 {
+        text-align: center;
+        font-size: clamp(30px, 6vw, 100px);
+        margin-bottom: 30px;
+
+        @include min_992 {
+          margin-bottom: 50px;
+        }
+      }
+
+      form {
+        flex-wrap: wrap;
+        // gap: 1.4rem;
+        justify-content: space-between;
+        @include flexbox;
+
+        .form-group {
+          margin-bottom: 1.5rem;
+
+          label {
+            font-size: 20px;
+            color: $white;
+            text-transform: capitalize;
+            display: block;
+            margin-bottom: 8px;
+          }
+
+          input,
+          textarea,
+          select {
+            width: 100%;
+            padding: 14px;
+            margin-top: 5px;
+            border: 2px solid #d0d5dd;
+            border-radius: 10px;
+            font-size: 16px;
+            color: $white;
+            background-color: transparent;
+
+            @include min_768 {
+              font-size: 18px;
+              padding: 16px;
+            }
+          }
+
+          textarea {
+            height: 120px;
+            resize: none;
+
+            @include min_768 {
+              height: 200px;
+            }
+          }
+        }
+
+        .button-box {
+          width: 100%;
+          @include flex-center;
+
+          @include min_992 {
+            justify-content: left;
+          }
+
+          .btn-default {
+            width: 100%;
+          }
+        }
+
+        ::placeholder {
+          color: #9d9d9d;
+          font-size: 18px;
+          @include Font_Inter_Medium;
+        }
+      }
+    }
+  }
+}
+
+#inputError {
+  .form__msg {
+    text-align: center;
+    color: $theme_color;
+    text-transform: capitalize;
+    font-size: 20px;
+
+    @include min_768 {
+      font-size: 26px;
+    }
+
+    @include min_992 {
+      font-size: 32px;
+    }
+  }
+}
+
+#formSuccess {
+  .form__msg {
+    text-align: center;
+    color: #00C853;
+    text-transform: capitalize;
+    font-size: 20px;
+
+    @include min_768 {
+      font-size: 26px;
+    }
+
+    @include min_992 {
+      font-size: 32px;
+    }
+  }
+}

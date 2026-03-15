@@ -1,0 +1,297 @@
+@use "../common/variable" as *;
+@use "../common/mixin" as *;
+
+.portfolio {
+  background: url("../../images/portfolio-banner-mobile.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include min_768 {
+    background: url("../../images/portfolio-banner.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+// .work-tab {
+//   .tabs-wrapper {
+//     text-align: center;
+
+//     /* MAIN TABS */
+//     .main-tabs {
+//       list-style: none;
+//       padding: 0;
+//       margin-bottom: 30px;
+//       gap: 12px;
+//       @include flex-center;
+//       flex-wrap: wrap;
+
+//       li {
+//         position: relative;
+//         padding: 10px 22px;
+//         border-radius: 10px;
+//         border: 1px solid $border_gray;
+//         cursor: pointer;
+//         font-size: 22px;
+//         width: 100%;
+//         @include Font_Anton;
+//         @include transition;
+
+//         @include min_576 {
+//           width: calc(50% - 6px);
+//         }
+
+//         @include min_992 {
+//           width: calc(33.33% - 8px);
+//         }
+
+//         @include min_1200 {
+//           width: calc(25% - 9px);
+//         }
+
+//         &:hover {
+//           background: $dark_gray;
+//         }
+
+//         &.active {
+//           background: $theme_color;
+//           border-color: $theme_color;
+//         }
+
+//         &.has-dropdown {
+//           padding-right: 42px;
+//         }
+
+//         .caret {
+//           position: absolute;
+//           right: 16px;
+//           top: 50%;
+//           width: 10px;
+//           height: 10px;
+//           border-right: 2px solid #fff;
+//           border-bottom: 2px solid #fff;
+//           transform: translateY(-50%) rotate(45deg);
+//           @include transition;
+//         }
+
+//         &.open .caret {
+//           transform: translateY(-40%) rotate(-135deg);
+//         }
+
+//         /* DROPDOWN */
+//         .dropdown {
+//           position: absolute;
+//           left: 0;
+//           top: calc(100% + 12px);
+//           width: 100%;
+//           background: #141414;
+//           border-radius: 10px;
+//           padding: 10px;
+//           display: none;
+//           z-index: 5;
+//           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+//           border: 1px solid $gray;
+//           max-height: 300px;
+//           overflow: auto;
+
+//           &::-webkit-scrollbar {
+//             width: 4px;
+//             height: 4px;
+//           }
+
+//           @include min_768 {
+//             width: 80%;
+//           }
+
+//           li {
+//             padding: 12px 16px;
+//             border-radius: 5px;
+//             font-size: 18px;
+//             width: 100%;
+//             text-align: left;
+//             @include transition;
+
+//             &:hover {
+//               background: #1f1f1f;
+//             }
+
+//             &.active {
+//               background: rgba(255, 0, 0, 0.2);
+//             }
+
+//             &:not(:last-child) {
+//               margin-bottom: 10px;
+//             }
+//           }
+//         }
+
+//         &.open {
+//           .dropdown {
+//             display: block;
+//           }
+//         }
+//       }
+//     }
+
+//     .active-title {
+//       margin: 20px 0 30px;
+//       font-size: 28px;
+//       letter-spacing: 1px;
+//     }
+
+//     /* CONTENT GRID */
+//     .tab-contents {
+//       .content {
+//         display: none;
+//         grid-template-columns: 1fr;
+//         gap: 20px;
+
+//         @include min_576 {
+//           grid-template-columns: repeat(2, 1fr);
+//         }
+
+//         @include min_992 {
+//           grid-template-columns: repeat(3, 1fr);
+//         }
+
+//         &.active {
+//           display: grid;
+//         }
+
+//         .img-box {
+//           border-radius: 10px;
+//           overflow: hidden;
+
+//           img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.work-tab {
+  .tabs-wrapper {
+    text-align: center;
+
+    /* MAIN TABS */
+    .main-tabs {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+      gap: 12px;
+      @include flex-center;
+      flex-wrap: wrap;
+
+      li {
+        padding: 12px 26px;
+        border-radius: 10px;
+        border: 1px solid $border_gray;
+        cursor: pointer;
+        font-size: 22px;
+        width: 100%;
+        @include Font_Anton;
+        @include transition;
+
+        @include min_576 {
+          width: calc(50% - 6px);
+        }
+
+        @include min_992 {
+          width: calc(33.33% - 8px);
+        }
+
+        &:hover {
+          background: $dark_gray;
+        }
+
+        &.active {
+          background: $theme_color;
+          border-color: $theme_color;
+        }
+      }
+    }
+
+  }
+
+  /* CONTENT */
+  .tab-contents {
+    .content {
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+  }
+}
+
+/* SUBCATEGORY BLOCK */
+.subcategory-block {
+  margin-bottom: 60px;
+  text-align: left;
+
+  .sub-title {
+    text-align: center;
+    margin-bottom: 16px;
+    @include Font_Inter_Medium;
+  }
+
+  .portfolio-slider {
+    .img-box {
+      border-radius: 10px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.portfolio-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lightbox-img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: 15px;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+  }
+}
+
+/* Optional UX polish */
+.img-box img {
+  cursor: pointer;
+}

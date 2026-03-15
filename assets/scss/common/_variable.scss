@@ -1,0 +1,46 @@
+@use "./fonts" as *;
+
+$theme_color: #e50914;
+$theme_light: #f28489;
+$black: #000000;
+$light_black: #1a1a1a;
+$black_second: #121212;
+$gray: #515151;
+$border_gray: #909090;
+$dark_gray: #292929;
+$white: #ffffff;
+
+// Font Family Variables
+$font_anton: "Anton", sans-serif;
+$font_inter_regular: "Inter-Regular", sans-serif;
+$font_inter_medium: "Inter-Medium", sans-serif;
+$font_inter_semiBold: "Inter-SemiBold", sans-serif;
+$font_inter_bold: "Inter-Bold", sans-serif;
+
+// font-weight variables
+$font-100: 100;
+$font-200: 200;
+$font-300: 300;
+$font-400: 400;
+$font-500: 500;
+$font-600: 600;
+$font-700: 700;
+$font-800: 800;
+$font-900: 900;
+
+// shodow variables
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+//media queries variables
+$min_321: 321px;
+$min_376: 376px;
+$min_480: 480px;
+$min_576: 576px;
+$min_768: 768px;
+$min_992: 992px;
+$min_1200: 1200px;
+$min_1300: 1300px;
+$min_1400: 1400px;
+$min_1500: 1500px;
+$min_1600: 1600px;

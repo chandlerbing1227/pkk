@@ -1,0 +1,376 @@
+@use "../common/variable" as *;
+@use "../common/mixin" as *;
+
+.lp-hero {
+  background-color: $black_second;
+
+  .hero-box {
+    gap: 25px;
+    align-items: center;
+    flex-direction: column;
+    @include flexbox;
+
+    @include min_992 {
+      gap: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    p {
+      text-align: center;
+      @include Font_Inter_SemiBold;
+      opacity: 0.9;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .button-box {
+      gap: 15px;
+      @include flex-center;
+
+      @include min_768 {
+        gap: 20px;
+      }
+    }
+  }
+}
+
+.lp-grid {
+  padding-top: 0;
+  .h4{
+    text-align: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    @include min_576 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include min_992 {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background-color: $light_black;
+      border-radius: 10px;
+      overflow: hidden;
+      @include transition;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      .img {
+        width: 100%;
+        height: 260px;
+        @include flex-center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .meta {
+        padding: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        p {
+          text-align: center;
+          text-transform: uppercase;
+          @include Font_Inter_SemiBold;
+        }
+      }
+    }
+  }
+}
+
+.lp-collection {
+  background-color: $light_black;
+
+  .title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .masonry {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    @include min_768 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .box {
+      border-radius: 10px;
+      overflow: hidden;
+      min-height: 240px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+.lp-why {
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include min_768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include min_1200 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item {
+      background-color: $black_second;
+      border-radius: 10px;
+      padding: 22px;
+      height: 100%;
+      text-align: center;
+      @include transition;
+
+      @include min_768 {
+        text-align: left;
+      }
+
+      &:hover {
+        filter: drop-shadow(3px 3px 2px $border_gray);
+      }
+
+      .icon {
+        margin-bottom: 10px;
+
+        img {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      h5 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        @include Font_Inter_SemiBold;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+.lp-logos {
+  background-color: $black_second;
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+
+    @include min_768 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .logo {
+      @include flex-center;
+      opacity: 0.6;
+      @include transition;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        width: 100%;
+        max-width: 130px;
+        height: 40px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.lp-cta {
+  background-color: $light_black;
+
+  .cta-box {
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    @include flexbox;
+
+    @include min_992 {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .text {
+      text-align: center;
+
+      @include min_992 {
+        text-align: left;
+      }
+    }
+
+    .stats {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+
+      @include min_576 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stat {
+        background-color: $black_second;
+        border-radius: 8px;
+        padding: 14px 16px;
+        text-align: center;
+
+        .h4 {
+          color: $theme_color;
+        }
+
+        p {
+          @include Font_Inter_SemiBold;
+          opacity: 0.9;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.lp-studio {
+  .studio-box {
+    gap: 25px;
+    align-items: center;
+    flex-direction: column;
+    @include flexbox;
+
+    @include min_992 {
+      flex-direction: row;
+    }
+
+    .left {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+
+      @include min_992 {
+        width: 65%;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        max-height: 450px;
+        object-fit: contain;
+
+        @include min_768 {
+          max-height: 650px;
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+      border-radius: 12px;
+      // background-color: $light_black;
+      padding: 0 22px;
+      text-align: center;
+
+      @include min_992 {
+        text-align: left;
+      }
+
+      @include min_992 {
+        width: 35%;
+      }
+
+      .button-box {
+        justify-content: center;
+        @include flexbox;
+        gap: 10px;
+
+        // @include min_768 {
+        //   justify-content: flex-start;
+        // }
+      }
+    }
+  }
+}
+
+.lp-blog {
+  background-color: $black_second;
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include min_768 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .post {
+      background-color: $light_black;
+      border-radius: 10px;
+      overflow: hidden;
+      @include transition;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      .thumb {
+        height: 250px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .content {
+        padding: 16px;
+        text-align: center;
+
+        @include min_768 {
+          text-align: left;
+        }
+
+        h6 {
+          margin-bottom: 6px;
+        }
+
+        p {
+          @include Font_Inter_SemiBold;
+        }
+      }
+    }
+  }
+}

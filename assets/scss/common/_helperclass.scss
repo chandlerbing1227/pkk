@@ -1,0 +1,611 @@
+@use "./variable" as *;
+@use "./mixin" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  background-color: $black_second;
+  color: $white;
+  @include Font_Inter_Regular;
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-top: 107px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  color: $white;
+  font-weight: normal;
+  @include Font_Anton;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.h1 {
+  font-size: 40px;
+
+  @include min_576 {
+    font-size: 55px;
+  }
+
+  @include min_768 {
+    font-size: 70px;
+  }
+
+  @include min_992 {
+    font-size: 90px;
+  }
+
+  @include min_1200 {
+    font-size: 110px;
+  }
+
+  @include min_1400 {
+    font-size: 125px;
+  }
+
+  @include min_1600 {
+    font-size: 140px;
+  }
+}
+
+.h2 {
+  font-size: 36px;
+
+  @include min_576 {
+    font-size: 48px;
+  }
+
+  @include min_768 {
+    font-size: 62px;
+  }
+
+  @include min_992 {
+    font-size: 78px;
+  }
+
+  @include min_1200 {
+    font-size: 95px;
+  }
+
+  @include min_1400 {
+    font-size: 108px;
+  }
+
+  @include min_1600 {
+    font-size: 120px;
+  }
+}
+
+.h3 {
+  font-size: 28px;
+
+  @include min_576 {
+    font-size: 36px;
+  }
+
+  @include min_768 {
+    font-size: 48px;
+  }
+
+  @include min_992 {
+    font-size: 62px;
+  }
+
+  @include min_1200 {
+    font-size: 76px;
+  }
+
+  @include min_1400 {
+    font-size: 86px;
+  }
+
+  @include min_1600 {
+    font-size: 100px;
+  }
+}
+
+.h4 {
+  font-size: 20px;
+
+  @include min_576 {
+    font-size: 24px;
+  }
+
+  @include min_768 {
+    font-size: 28px;
+  }
+
+  @include min_992 {
+    font-size: 32px;
+  }
+
+  @include min_1200 {
+    font-size: 36px;
+  }
+
+  @include min_1400 {
+    font-size: 38px;
+  }
+
+  @include min_1600 {
+    font-size: 40px;
+  }
+}
+
+.h5 {
+  font-size: 18px;
+
+  @include min_576 {
+    font-size: 20px;
+  }
+
+  @include min_768 {
+    font-size: 22px;
+  }
+
+  @include min_992 {
+    font-size: 26px;
+  }
+
+  @include min_1200 {
+    font-size: 28px;
+  }
+
+  @include min_1400 {
+    font-size: 30px;
+  }
+
+  @include min_1600 {
+    font-size: 32px;
+  }
+}
+
+.h6 {
+  font-size: 16px;
+
+  @include min_576 {
+    font-size: 18px;
+  }
+
+  @include min_768 {
+    font-size: 20px;
+  }
+
+  @include min_992 {
+    font-size: 22px;
+  }
+
+  @include min_1200 {
+    font-size: 24px;
+  }
+
+  @include min_1600 {
+    font-size: 26px;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: $white;
+  text-align: center;
+
+  @include min_992 {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  @include min_1600 {
+    font-size: 20px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  line-height: 1.2;
+  color: inherit;
+  font-family: inherit;
+  font-size: 18px;
+
+  @include min_1200 {
+    font-size: 20px;
+  }
+}
+
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: unset;
+}
+
+span {
+  display: inline-block;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.container {
+  max-width: 95%;
+  padding: 0 12px;
+  margin: 0 auto;
+
+  @include min_1200 {
+    max-width: 1150px;
+  }
+
+  @include min_1300 {
+    max-width: 1250px;
+  }
+
+  @include min_1400 {
+    max-width: 1350px;
+  }
+
+  @include min_1500 {
+    max-width: 1450px;
+  }
+
+  @include min_1600 {
+    max-width: 1600px;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+
+  @include min_992 {
+    margin-bottom: 50px;
+  }
+
+  .h3 {
+    text-transform: uppercase;
+  }
+}
+
+.button-box {
+  padding-top: 15px;
+
+  @include min_992 {
+    padding-top: 25px;
+  }
+}
+
+.btn-default {
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: $theme_color;
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include Font_Anton;
+  @include inline-flex-center;
+  @include transition;
+
+  @include min_992 {
+    font-size: 22px;
+    padding: 20px 25px;
+  }
+
+  &:hover {
+    color: $theme_color;
+  }
+
+  .hover-bg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    background: $white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    @include transition;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    max-width: 30px;
+    margin-right: 10px;
+  }
+
+  &.white {
+    background-color: $white;
+    color: $theme_color;
+
+    &:hover {
+      color: $white;
+    }
+
+    .hover-bg {
+      background: $black;
+    }
+  }
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+  @include section_padding;
+}
+
+.light-black-bg {
+  background-color: $light_black;
+}
+
+.mobile {
+  display: block;
+
+  @include min_992 {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @include min_992 {
+    display: block;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 7px;
+
+  .line {
+    width: 27px;
+    height: 3px;
+    border-radius: 7px;
+    background-color: $theme_color;
+    display: block;
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(2) {
+      width: 35px;
+    }
+  }
+
+  &.is-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+    position: relative;
+    z-index: 9999;
+    background-color: transparent;
+
+    .line {
+      background-color: $white;
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+
+      &:nth-child(1) {
+        transform: translateY(9px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-9px) rotate(90deg);
+      }
+    }
+  }
+
+  @include min_992 {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: $light_black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 50px;
+  background: $theme_color;
+}
+
+::selection {
+  background-color: $theme_color;
+  color: #ffffff;
+}
+
+// inner banner common style
+
+.inner-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px 0 60px;
+  height: 70dvh;
+
+  @include min_992 {
+    padding: 150px 0 100px;
+  }
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    background-color: $light_black;
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+    @include before_after;
+  }
+
+  &.about-us {
+    &::after {
+      display: none;
+    }
+  }
+
+  &.portfolio {
+    &::after {
+      display: none;
+    }
+  }
+
+  .inner-banner-box {
+    position: relative;
+    z-index: 9;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+// slider box css
+
+.slider-box {
+  background-color: $light_black;
+  border-radius: 60px 0 60px 0;
+  padding: 40px 20px;
+  margin-top: 30px;
+
+  @include min_992 {
+    margin-top: 50px;
+  }
+
+  .title {
+    p {
+      font-size: 20px;
+      text-align: center;
+      @include Font_Inter_SemiBold;
+
+      @include min_1200 {
+        font-size: 30px;
+      }
+
+      @include min_1400 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .creative-slider {
+    // padding-top: 40px;
+
+    .item {
+      img {
+        width: 150px;
+        height: 30px;
+        opacity: 0.5;
+        object-fit: contain;
+
+        @include min_576 {
+          width: 180px;
+          height: 40px;
+        }
+
+        @include min_1200 {
+          width: 200px;
+          height: 50px;
+        }
+
+        @include min_1400 {
+          width: 274px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+.whatsapp-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 35px;
+  z-index: 9999999;
+  animation: floatUpDown 2s ease-in-out infinite;
+
+  @include min_768 {
+    bottom: 20px;
+  }
+}
+
+.whatsapp-icon img {
+  width: 50px;
+  height: 50px;
+
+  @include min_768 {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

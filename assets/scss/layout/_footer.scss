@@ -1,0 +1,196 @@
+@use "../common/variable" as *;
+@use "../common/mixin" as *;
+
+footer.footer {
+  background-color: $black_second;
+  padding: 20px 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+  @include min_992 {
+    padding: 20px 0 20px;
+  }
+
+  .top-box {
+    .h1 {
+      font-size: clamp(30px, 16vw, 200px);
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1;
+    }
+
+    p,
+    a {
+      text-align: left;
+      @include Font_Inter_SemiBold;
+    }
+
+    .logo-box {
+      margin-bottom: 20px;
+
+      img {
+        max-width: 180px;
+      }
+    }
+
+    .text-box {
+      @include min_768 {
+        max-width: 80%;
+      }
+    }
+
+    .box {
+      height: 100%;
+
+      &.box-4 {
+        p {
+          margin-bottom: 20px;
+        }
+      }
+
+      h5 {
+        margin-bottom: 30px;
+      }
+
+      ul {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: space-between;
+        @include flexbox;
+
+        li {
+          a {
+            position: relative;
+            @include transition;
+
+            &::after {
+              width: 0;
+              height: 2px;
+              background-color: $white;
+              transform: translateY(-50%);
+              top: 50%;
+              left: 0;
+              border-radius: 10px;
+              @include before_after;
+            }
+
+            &:hover,
+            &.active {
+              padding-left: 20px;
+
+              &::after {
+                width: 12px;
+              }
+            }
+
+            &.small {
+              text-transform: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-part {
+    // margin-top: 20px;
+    // padding-top: 30px;
+    // border-top: 1px solid rgba(255, 255, 255, 0.5);
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    @include flexbox;
+
+    @include min_768 {
+      justify-content: space-between;
+    }
+
+    .text {
+      ul {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: space-between;
+        @include flexbox;
+
+        @include min_768 {
+          flex-direction: row !important;
+        }
+
+        li {
+          a {
+            position: relative;
+            font-size: 16px;
+            @include transition;
+
+            &::after {
+              width: 0;
+              height: 2px;
+              background-color: $white;
+              transform: translateY(-50%);
+              top: 50%;
+              left: 0;
+              border-radius: 10px;
+              @include before_after;
+            }
+
+            &:hover,
+            &.active {
+              padding-left: 20px;
+
+              &::after {
+                width: 12px;
+              }
+            }
+
+            &.small {
+              text-transform: unset;
+            }
+          }
+        }
+      }
+    }
+
+    .links-box {
+      ul {
+        align-items: center;
+        gap: 8px;
+        @include flexbox;
+
+        li {
+          a {
+            border: 2px solid $white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            @include flex-center;
+            @include transition;
+
+            @include min_992 {
+              width: 45px;
+              height: 45px;
+            }
+
+            &:hover {
+              transform: translateY(-3px);
+              background-color: $white;
+
+              i {
+                color: $theme_color;
+              }
+            }
+
+            i {
+              font-size: 20px;
+              color: $white;
+              @include transition;
+
+              @include min_992 {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
